@@ -1,5 +1,5 @@
 ---
-title: set up wifi in raspberry os no screen
+title: set up wifi in raspberry os, no screen
 date: 2021-03-28 22:01:00
 draft: false
 ---
