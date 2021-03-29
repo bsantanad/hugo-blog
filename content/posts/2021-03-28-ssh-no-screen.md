@@ -4,7 +4,7 @@ date: 2021-03-28 22:01:00
 draft: false
 ---
 
-# Set up wifi in raspberry os (no screen, keyboard, mouse)
+# Set up wifi in raspberry os (no screen, no keyboard, no mouse)
 
 ## what we'll do
 
@@ -137,3 +137,5 @@ precautions. But don't worry you can always use _nmap_ to find it.
 Hope that helps,
 happy coding :)
 ben
+
+[flash]: https://bsantanad.com/posts/2021-03-28-flash-img/
