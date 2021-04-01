@@ -31,7 +31,7 @@ simplicity let's assume there's only one) that hosts the vpn, let's be
 creative and call this server _the host_. If Cliff want's to do all this
 cool things (chat and share files) with his friends in the UK, he will
 ask them politely to connect to _the host_ (the vpn server) he just
-set up. Now all he has to do is connected to _the host_.
+set up. Now all he has to do is connect to _the host_.
 
 What happens now?, well remember this id every computer had? I think we
 called it _IP_. Well now every computer has two of them, the one from
@@ -63,7 +63,7 @@ _the host_ (if you already forgot _the host_ is the vpn server), this
 means all the web pages they visit, think they are making the request
 from the place where _the host_ is. In this case US.
 
-To put it briefly, all the web pages the folks form UK visit now will
+To put it briefly, all the web pages the folks from UK visit now will
 think they're not from the UK but from the US. (because that is where
 _the host is_)
 
@@ -76,7 +76,7 @@ connections to some server in the US: _the host_.
 You bet it does, your ISP can sell the info of the websites you visit
 legally. Now all they'll sell is you connecting to _the host_.
 
-Wohoo we are anonymous that great! Wait.. are we forgetting something?
+Wohoo we are anonymous that's great! Wait.. are we forgetting something?
 
 Cliff!! He set up the server, he can see the websites we visit. Damn
 Cliff I bet this was his plan from the beginning we should have never
@@ -95,7 +95,7 @@ provider_. This means they can see all the data your ISP used to log.
 
 Can you trust them with that data? Well, that's up to you. There are
 VPNs that have a no-logs policy meaning they don't store anything.
-But to be honest you can be never really sure.
+But to be honest you can't be sure.
 
 **Personal Opinion Warning**
 I'd recommend Mullvad VPN, they are the best I've seen in the privacy
@@ -112,8 +112,9 @@ Can I be Cliff and make my own _the host_. Well glad you ask, I'll
 cover that in the next article.
 
 ### Where did you get this info?
-Teacher and co-workers. No Google Scholar, so take all this with a
+teacher and co-workers. No Google Scholar, so take all this with a
 grain of salt. :)
 
 happy coding :)
+
 ben
