@@ -1,6 +1,6 @@
 ---
 title: Articles
-subtitle: Posts, tutorials, snippets, musings, and everything else.
+subtitle: posts and howto's on unix related things
 date: 2020-11-26
 type: section
 layout: "archives"
