@@ -41,13 +41,13 @@ will enable sshd.
 
 if you don't know how to mount a device check
 ```bash
-touch mount
+man mount
 ```
 for more info
 
 ## connect to router
 
-Okay, get up of your chair and go to your router. Connect the ethernet
+Okay, get up from your chair and go to your router. Connect the ethernet
 cable to both the raspberry pi and your router, hear the click in both
 sides and plug the raspberry into the power socket.
 
@@ -127,7 +127,7 @@ Finally, just run:
 ```bash
 ifconfig -a
 ```
-You must see the wlan0 interface with an IP address. If that's there
+You must see the wlan0 interface with an IP address. If that's there:
 congrats! Now you can unplug the ethernet cable, your raspberry has
 wifi now.
 
@@ -135,7 +135,9 @@ wifi now.
 precautions. But don't worry you can always use _nmap_ to find it.
 
 Hope that helps,
+
 happy coding :)
+
 ben
 
 [flash]: https://bsantanad.com/posts/2021-03-28-flash-img/
