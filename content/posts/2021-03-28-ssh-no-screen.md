@@ -1,10 +1,10 @@
 ---
-title: set up wifi in raspberry os, no screen
+title: set up wifi in raspberry os, no monitor
 date: 2021-03-28 22:01:00
 draft: false
 ---
 
-# Set up wifi in raspberry os (no screen, no keyboard, no mouse)
+# Set up wifi in raspberry os (no monitor, no keyboard, no mouse)
 
 ## what we'll do
 
