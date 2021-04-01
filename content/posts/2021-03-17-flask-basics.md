@@ -25,7 +25,7 @@ project layout:
     - tests
     - venv
 
-Good .gitingore  for a project like this
+a good .gitingore  for a project like this
 ```shell
 venv/
 .venv
@@ -74,7 +74,7 @@ purposes.
 
 ## db
 
-In the tutorial they use _sqlite3_, it's cool and all, but it happens to
+In the tutorial they use _sqlite3_, it's cool and all, but it happens to not
 have concurrent requests it will slow down as each write happens sequentially.
 
 So for big projects they're a big no no, I would recommend __sqlalchemy__.
