@@ -38,6 +38,7 @@ rustup doc # local docs
 rustc self uninstall # uninstall rust
 rustc <file>.rs # compile code
 rustfmt <file>.rs # format code
+
 # cargo
 cargo new <project dir> # set up a rust project
 cargo build # build the current project
@@ -66,10 +67,10 @@ hello world!
 
 * main function is the first to run in every rust program
 * the _!_ after `println` means that we are calling a rust macro
-not a function (what's the difference you might ask? I have no idea
+not a function (what's the difference you might ask? I have no idea,
 at least not yet)
 * spaces instead of tabs (4)
-* every line ends in _;_
+* every line ends in `;`
 
 ## cargo
 
