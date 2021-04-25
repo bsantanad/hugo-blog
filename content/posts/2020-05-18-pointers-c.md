@@ -1,6 +1,7 @@
 ---
 title: pointer basics and structures in c.
 date: 2020-05-18 10:20:00 -0600
+author: bsantanad
 draft: false
 ---
 

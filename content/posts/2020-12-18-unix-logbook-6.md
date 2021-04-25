@@ -1,6 +1,7 @@
 ---
 title: FreeBSD-Unix Logbook 6, Mounting File Systems
 date: 2020-12-18 16:00:00
+author: bsantanad
 draft: false
 ---
 ## _fstab_ File

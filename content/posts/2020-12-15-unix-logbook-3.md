@@ -1,6 +1,7 @@
 ---
 title: FreeBSD-Unix Logbook 3, Permissions
 date: 2020-12-15 11:08:00
+author: bsantanad
 draft: false
 ---
 

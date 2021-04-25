@@ -1,6 +1,7 @@
 ---
 title: starting out with rust and cargo 
 date: 2021-04-24 21:14:00
+author: bsantanad
 draft: false
 ---
 

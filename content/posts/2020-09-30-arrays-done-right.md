@@ -1,6 +1,7 @@
 ---
 title: revisit to c - arrays
 date: 2020-09-30 18:41:00
+author: bsantanad
 draft: false
 ---
 

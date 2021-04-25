@@ -1,6 +1,7 @@
 ---
 title: bash scripting 101
 date: 2021-01-06 16:00:00
+author: bsantanad
 draft: false
 ---
 ## The Book

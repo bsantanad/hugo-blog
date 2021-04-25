@@ -1,6 +1,7 @@
 ---
 title: typecasting in c
 date: 2020-05-20 10:28:00 -0600
+author: bsantanad
 draft: false
 ---
 

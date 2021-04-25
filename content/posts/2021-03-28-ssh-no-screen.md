@@ -1,6 +1,7 @@
 ---
 title: set up wifi in raspberry os, no monitor
 date: 2021-03-28 22:01:00
+author: bsantanad
 draft: false
 ---
 

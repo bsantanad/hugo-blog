@@ -1,6 +1,7 @@
 ---
 title: arrays and strings in c.
 date: 2020-05-18 19:28:00 -0600
+author: bsantanad
 draft: false
 ---
 

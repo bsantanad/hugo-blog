@@ -1,6 +1,7 @@
 ---
 title: FreeBSD-Unix Logbook 7, Processes and Daemons
 date: 2020-12-20 08:42:00
+author: bsantanad
 draft: false
 ---
 ## Brief Introduction
