@@ -6,7 +6,7 @@ draft: false
 
 # quick background
 
-hi! so recently (I don'tk now why) I got a sudden itch. This itch wanted me
+hi! so recently (I don't now why) I got a sudden itch. This itch wanted me
 to learn the ruby programming language. I've been learning golang for a class
 this semester and at first I didn't like it that much, but after using it a
 a bit more, I'm growing an acquired taste for it. I think rust will be a whole
