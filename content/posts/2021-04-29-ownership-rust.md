@@ -34,9 +34,9 @@ without even realizing. I'll make a super brief explanation here.
 time.
 
 A common example is _arrays_ vs _dynamic arrays_. Arrays have a defined
-size at runtime, then, we can store them in the stack, in order no problema.
+size at runtime, then, we can store them in the stack in order, no problema.
 Dynamic arrays in the other hand doesn't have a fixed value so the allocator
-will save a chunk of memory in the heap withou knowing if it will be filled
+will save a chunk of memory in the heap without knowing if it will be filled
 or not.
 
 An example with code:
@@ -94,9 +94,9 @@ snippet above the variable is changing of owner. `a` is no longer the owner
 of the `String::from("hello")` pointer, the new owner is `b`.
 
 What actually happens has to do with pointers, at the start of the code we
-are telling `a` to point to an address of memory that has the characters
+are telling `a` to point to a memory address that has the characters
 _hello_, then we are telling `b` to point to the same address. Then both
-variables will be pointing at the same address of memory. _What will happen
+variables will be pointing at the same address. _What will happen
 when both variables go out of scope?_ Rust will try to free the memory, but
 which memory will it free first? `a` or `b`? and if it frees either of them
 first, then when it frees the next one, how is he going to free some address
@@ -124,4 +124,101 @@ fn main(){
 ```bash
 a is hello
 ```
+
+### functions
+
+Functions work the same way, when you send a param it changes owner, if not
+returned it will go out of scope when the function end, in oder words
+this wouldn't compile
+```rust
+fn main() {
+    let a = String::from("hello");
+    takes_ownership(a)
+
+    println!("a is {}", a);
+}
+
+fn takes_ownership(some_string: String) {
+    println!("this is a: {}", some_string);
+}
+```
+**^^^ this does not compile**
+if we want to keep using a after sending it we can return the value and let
+a have that memory address again:
+```rust
+fn main() {
+    let a = String::from("hello");
+    let a = takes_ownership(a);
+
+    println!("a is {}", a);
+}
+
+fn takes_ownership(some_string: String) -> String {
+    println!("this is a: {}", some_string);
+    some_string
+}
+```
+**output**
+```bash
+this is a: hello
+a is hello
+```
+## references
+
+what if we want find tedious returning every value and reassing in it with
+`let`. Well in that case we can use referencing, another way to do the code
+above that works just as fine, is this:
+```rust
+fn main() {
+    let a = String::from("hello");
+    dont_take_ownership(&a);
+
+    println!("a is {}", a);
+}
+
+fn dont_take_ownership(some_string: &String) {
+    println!("this is a: {}", some_string);
+}
+```
+What we are doing here is creating a reference, we are sending the function the
+actual memory address, therefore he can use it but not modify it, references (
+as variables) are immutable by default, if we want to send it for him to
+modify it, we would do this:
+```rust
+fn main() {
+    let mut a = String::from("hello");
+    dont_take_ownership(&mut a);
+
+    println!("a is {}", a);
+}
+
+fn dont_take_ownership(some_string: &mut String) {
+    some_string.push_str(" there");
+}
+```
+**output**
+```bash
+a is hello there
+```
+Finally there are a few thing you must be aware,
+* you cannot borrow a variable as mutable more than once
+```rust
+let mutmut  hello = String::from("hello");
+let a = &mut hello;
+let b = &mut hello;
+println!("{}, {}", a, b);
+```
+**^^^ this does not compile**
+
+We can actually do this, but we have to stop using the variable
+we assigned it to, and then assign it to another one.
+```rust
+let mut hello = String::from("hello");
+let a = &mut hello;
+println!("{}", a);
+let b = &mut hello;
+println!("{}", b);
+```
+If we try to use a after  we told `b` it would be the owner of `&muy hello`
+it wont compile.
 
