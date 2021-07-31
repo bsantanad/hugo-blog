@@ -7,12 +7,7 @@ draft: false
 
 # ownership in rust
 
-I've been learning rust for the last couple of days, and I've liked it so far
-it's quite interesting and different from other programming languages,
-but it is also similar in some aspects.
-
-Well, I won't tell you my life story here, these are my notes on the fourth
-chapter of [the book][book]
+these are my notes on the fourth chapter of [the book][book]
 
 ## small intro
 
