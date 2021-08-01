@@ -156,7 +156,7 @@ fn main(){
 you write the scalar type, then a `;` and finally you write the size of the
 array. Remember all elements in the array must have the same scalar type
 
-If you want to initialize an array with _4_ (or any number) elements and
+If you want to initialise an array with _4_ (or any number) elements and
 want all the elements to have the same value, you can do this:
 ```rust
 fn main(){
