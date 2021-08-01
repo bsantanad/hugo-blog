@@ -21,11 +21,11 @@ different way. That's what all this chapter is about.
 I'll start with some basic yet -- if you are not familiar with it --
 confusing topic. Stacks and Heaps exist in every programming language
 it's not something you think about often, but you are dealing with it
-without even realizing. I'll make a super brief explanation here.
+without even realising. I'll make a super brief explanation here.
 
 * stacks and heaps are parts of your memory available at runtime.
 * stacks order store their values _last in, first out_.
-* heaps are less organized, it stores data with unknown size at compile
+* heaps are less organised, it stores data with unknown size at compile
 time.
 
 A common example is _arrays_ vs _dynamic arrays_. Arrays have a defined
