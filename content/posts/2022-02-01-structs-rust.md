@@ -23,7 +23,7 @@ things.
 ## defining and instantiating structs
 
 basically you write keyword `struct` and the name of the entire struct.
-```
+```rust
 struct User {
     active: bool,
     username: String,
@@ -33,7 +33,7 @@ struct User {
 ```
 
 once you definite it you can instantiate, like this:
-```
+```rust
 fn main() {
     let user = User {
         email: String::from("john@example.com"),
@@ -47,7 +47,7 @@ fn main() {
 ```
 
 you can access each element of the struct by writing a dot, so:
-```
+```rust
 println!("{}", user.email);
 ```
 in this case.
@@ -55,7 +55,7 @@ in this case.
 If you want to modify the value of `user.email` the whole struct should be
 mutable. Rust do not support letting some items of the struct be mutable and
 some not. You would have to do:
-```
+```rust
 let mut user = User {
     email: String::from("john@example.com"),
     username: String::from("johnsmith12"),
@@ -68,7 +68,7 @@ println!("{}", user.email);
 ```
 
 Lets now create a function, that builds a user
-```
+```rust
 fn build_user(email: String, username: String, age: u32) -> User {
     User {
         email,
@@ -89,7 +89,7 @@ Say you have declared `user` and now you need to declare `user2` and you realise
 that's `user2` has the same data as `user`, except from the email, rust have a nice
 trick for that:
 
-```
+```rust
 let user = User {
     email: String::from("john@example.com"),
     username: String::from("johnsmith12"),
@@ -119,7 +119,7 @@ You can create structs without specifying the name of the fields. _You
 mean like tuples?_ yes, exactly like tuples. But in this case we are defining
 a new data type so it is not just some random tuple, here's an example.
 
-```
+```rust
 struct Color(i32, i32, i32);
 struct Point(i32, i32, i32);
 
@@ -139,7 +139,7 @@ the same fields they are diff so you can not use them interchangeably.
 ### unit-like structs
 
 is a struct without any field:
-```
+```rust
 struct Always;
 
 let subject = Always;
@@ -161,7 +161,7 @@ we can use.
 We can tell rust that we are debugging the program and that we want to check
 what's inside the struct. We will have to modify `println!` a bit, here's an
 example:
-```
+```rust
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
@@ -188,7 +188,7 @@ Display method.
 There's other way too, using the `dbg!()` macro. Be careful this macro will
 take ownership of the variable you send so it's better to just send the
 reference
-```
+```rust
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
@@ -200,18 +200,18 @@ fn main() {
         width: 5,
         height: 7,
     };
-    
+
     dbg!(&rect);
 }
 ```
-Output 
+Output
 ```
 [src/main.rs:12] &rect = Rectangle {
     width: 5,
     height: 7,
 }
 ```
-this macro have a little more info on what's going on, it'll be helpful when 
+this macro have a little more info on what's going on, it'll be helpful when
 debugging big programs
 
 ## methods
@@ -227,7 +227,7 @@ of the day, each shape we declare will have their own way to calc the area.
 
 Then we can use a method.
 
-```
+```rust
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
@@ -266,7 +266,7 @@ We can create another method inside `impl`. Say for example a method that tells
 us is a rectangle fit's inside another rectangle.
 
 I'll let the code speak by it self
-```
+```rust
 struct Rectangle {
     width: u32,
     height: u32,
@@ -276,7 +276,7 @@ impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
     }
-    
+
     fn can_hold(&self, rect: Rectangle) -> bool {
         self.area() > rect.area()
     }
@@ -309,7 +309,7 @@ have the `self` operator, this helps keeping the code nice and neat. Say
 we want a function to create an square.
 
 We would do that the following way
-```
+```rust
 struct Rectangle {
     width: u32,
     height: u32,
@@ -319,7 +319,7 @@ impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
     }
-    
+
     fn can_hold(&self, rect: Rectangle) -> bool {
         self.area() > rect.area()
     }
@@ -348,7 +348,7 @@ fn main() {
 ```
 
 Notice how we are calling the `square()` function, we write the name of the
-struct and then the function name. And the code looks more organised. 
+struct and then the function name. And the code looks more organised.
 
 I think that's it for this post, this struct part of rust is cool, because
 we can have some part of OOP without dealing with the whole inheritance thing
