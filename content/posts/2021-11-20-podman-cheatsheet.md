@@ -27,6 +27,9 @@ Podman uses buildah to create container images.
  
 - `podman build -t <tag/name> -f <dockerfile>`
   - build container, with tag from dockerfile.
+  - if it complaints about some `crun` permissions thing, you can try adding
+    `--cgroup-manager cgroupfs` to the command. This is just a workaround
+    you need to check how to fix it.
 
 - `podman images`
   - list images in local storage
